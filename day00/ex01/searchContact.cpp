@@ -8,7 +8,7 @@ void searchContact(PhoneBook Phonebook[], int numOfContactsAdded)
     int index = 0;
     std::cout << "Enter the index : " << std::endl;
     std::cin >> index;
-    if (index >= 0 && index < numOfContactsAdded) {
+    if (std::cin && index >= 0 && index < numOfContactsAdded) {
         std::cout << Phonebook[index].getFirstName() << std::endl;
         std::cout << Phonebook[index].getLastName() << std::endl;
         std::cout << Phonebook[index].getLogin() << std::endl;
@@ -23,7 +23,7 @@ void searchContact(PhoneBook Phonebook[], int numOfContactsAdded)
     else
     {
         std::cin.clear();
-        // std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         std::cout << "Sorry, nothing to show." << std::endl;
     }
 }
