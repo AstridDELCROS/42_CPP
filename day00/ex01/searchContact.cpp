@@ -3,30 +3,28 @@
 #include <string>
 #include <iomanip>
 
-void searchContact(Contact Phonebook[], int numOfContactsAdded)
+void searchContact(PhoneBook Phonebook[], int numOfContactsAdded)
 {
     int index = 0;
-    while (index < numOfContactsAdded) {
-        std::cout << "Enter the index : " << std::endl;
-        std::cin >> index;
-        if (index >= 0 && index < numOfContactsAdded) {
-            std::cout << Phonebook[index].m_firstName << std::endl;
-            std::cout << Phonebook[index].m_lastName << std::endl;
-            std::cout << Phonebook[index].m_login << std::endl;
-            std::cout << Phonebook[index].m_favoriteMeal << std::endl;
-            std::cout << Phonebook[index].m_emailAddress << std::endl;
-            std::cout << Phonebook[index].m_phoneNumber << std::endl;
-            std::cout << Phonebook[index].m_birthdayDate << std::endl;
-            std::cout << Phonebook[index].m_favoriteMeal << std::endl;
-            std::cout << Phonebook[index].m_underwearColor << std::endl;
-            std::cout << Phonebook[index].m_darkestSecret << std::endl;
-        }
-        else
-        {
-            std::cin.clear();
-            std::cout << "Sorry, nothing to show." << std::endl;
-            break;
-        }
+    std::cout << "Enter the index : " << std::endl;
+    std::cin >> index;
+    if (index >= 0 && index < numOfContactsAdded) {
+        std::cout << Phonebook[index].getFirstName() << std::endl;
+        std::cout << Phonebook[index].getLastName() << std::endl;
+        std::cout << Phonebook[index].getLogin() << std::endl;
+        std::cout << Phonebook[index].getFavoriteMeal() << std::endl;
+        std::cout << Phonebook[index].getEmail() << std::endl;
+        std::cout << Phonebook[index].getPhoneNumber() << std::endl;
+        std::cout << Phonebook[index].getBirthdayDate() << std::endl;
+        std::cout << Phonebook[index].getFavoriteMeal() << std::endl;
+        std::cout << Phonebook[index].getUnderwearColor() << std::endl;
+        std::cout << Phonebook[index].getDarkestSecret() << std::endl;
+    }
+    else
+    {
+        std::cin.clear();
+        // std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        std::cout << "Sorry, nothing to show." << std::endl;
     }
 }
 
@@ -40,7 +38,7 @@ std::string	columnLength(std::string field)
     return (field);
 }
 
-void displayPhonebook(Contact Phonebook[], int numOfContactsAdded)
+void displayPhonebook(PhoneBook Phonebook[], int numOfContactsAdded)
 {
     std::string firstname;
     std::string lastname;
@@ -50,9 +48,9 @@ void displayPhonebook(Contact Phonebook[], int numOfContactsAdded)
     std::cout << "|     Index|First Name| Last Name|  Nickname|" << std::endl;
     for(int i = 0; i < numOfContactsAdded; i += 1)
     {
-        firstname = Phonebook[i].m_firstName;
-        lastname = Phonebook[i].m_lastName;
-        login = Phonebook[i].m_login;
+        firstname = Phonebook[i].getFirstName();
+        lastname = Phonebook[i].getLastName();
+        login = Phonebook[i].getLogin();
 
         std::cout << "|" << std::setw(10) << i;
         

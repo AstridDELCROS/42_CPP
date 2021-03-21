@@ -2,70 +2,100 @@
 #include "contact.hpp"
 #include <string>
 
-Contact::Contact()
+PhoneBook::PhoneBook()
 {
-    m_index = "";
-    m_firstName = "";
-    m_lastName = "";
-    m_nickName = "";
-    m_login = "";
-    m_postalAddress = "";
-    m_emailAddress = "";
-    m_phoneNumber = "";
-    m_birthdayDate = "";
-    m_favoriteMeal = "";
-    m_underwearColor = "";
-    m_darkestSecret = "";
+    _firstName = "";
+    _lastName = "";
+    _nickName = "";
+    _login = "";
+    _postalAddress = "";
+    _emailAddress = "";
+    _phoneNumber = "";
+    _birthdayDate = "";
+    _favoriteMeal = "";
+    _underwearColor = "";
+    _darkestSecret = "";
 }
-Contact::~Contact()
+PhoneBook::~PhoneBook()
 {}
-
-void Contact::setFirstName(std::string first_name)
+void PhoneBook::setFirstName(std::string first_name)
 {
-    m_firstName = first_name;
+    _firstName = first_name;
+}
+void PhoneBook::setLastName(std::string last_name)
+{
+    _lastName = last_name;
+}
+void PhoneBook::setLogin(std::string login)
+{
+    _login = login;
+}
+void PhoneBook::setPostalAddress(std::string postal_address)
+{
+    _postalAddress = postal_address;
+}
+void PhoneBook::setEmail(std::string email)
+{
+    _emailAddress = email;
+}
+void PhoneBook::setPhoneNumber(std::string phone_number)
+{
+    _phoneNumber = phone_number;
+}
+void PhoneBook::setBirthdayDate(std::string birthday_date)
+{
+    _birthdayDate = birthday_date;
+}
+void PhoneBook::setFavoriteMeal(std::string favorite_meal)
+{
+    _favoriteMeal = favorite_meal;
+}
+void PhoneBook::setUnderwearColor(std::string underwear_color)
+{
+    _underwearColor = underwear_color;
+}
+void PhoneBook::setDarkestSecret(std::string darkest_secret)
+{
+    _darkestSecret = darkest_secret;
 }
 
-void Contact::setLastName(std::string last_name)
+std::string PhoneBook::getFirstName(void)
 {
-    m_lastName = last_name;
+    return _firstName;
 }
-
-void Contact::setLogin(std::string login)
+std::string PhoneBook::getLastName(void)
 {
-    m_login = login;
+    return _lastName;
 }
-
-void Contact::setPostalAddress(std::string postal_address)
+std::string PhoneBook::getLogin(void)
 {
-    m_postalAddress = postal_address;
+    return _login;
 }
-
-void Contact::setEmail(std::string email)
+std::string PhoneBook::getPostalAddress(void)
 {
-    m_emailAddress = email;
+    return _postalAddress;
 }
-
-void Contact::setPhoneNumber(std::string phone_number)
+std::string PhoneBook::getEmail(void)
 {
-    m_phoneNumber = phone_number;
+    return _emailAddress;
 }
-
-void Contact::setBirthdayDate(std::string birthday_date)
+std::string PhoneBook::getPhoneNumber(void)
 {
-    m_birthdayDate = birthday_date;
+    return _phoneNumber;
 }
-
-void Contact::setFavoriteMeal(std::string favorite_meal)
+std::string PhoneBook::getBirthdayDate(void)
 {
-    m_favoriteMeal = favorite_meal;
+    return _birthdayDate;
 }
-
-void Contact::setUnderwearColor(std::string underwear_color)
+std::string PhoneBook::getFavoriteMeal(void)
 {
-    m_underwearColor = underwear_color;
+    return _favoriteMeal;
 }
-
-void Contact::setDarkestSecret(std::string darkest_secret)
+std::string PhoneBook::getUnderwearColor(void)
 {
-    m_darkestSecret = darkest_secret;
+    return _underwearColor;
+}
+std::string PhoneBook::getDarkestSecret(void)
+{
+    return _darkestSecret;
 }

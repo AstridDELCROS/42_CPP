@@ -2,9 +2,9 @@
 #include "contact.hpp"
 #include <string>
 
-Contact addContact(void)
+PhoneBook addContact(void)
 {
-    Contact new_entry;
+    PhoneBook new_entry;
     std::string input;
     std::cout << "Enter your firstname : " << std::endl;
     std::cin >> input;

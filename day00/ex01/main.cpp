@@ -11,7 +11,7 @@ int main()
     std::cout << "EXIT" << std::endl;
     std::cout << std::endl;
 
-    Contact Phonebook[MAX_CONTACTS];
+    PhoneBook Phonebook[MAX_CONTACTS];
     int entry_index;
     std::string choice;
 
@@ -39,7 +39,7 @@ int main()
         }
         else {
             std::cout << "Choose between ADD, SEARCH and EXIT please" << std::endl;
-            std::cout << std::endl;   
+            std::cout << std::endl;
         }
     }
     return (0);
