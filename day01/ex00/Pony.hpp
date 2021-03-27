@@ -6,17 +6,15 @@
 class Pony
 {
     public:
-    Pony();
+    Pony(std::string name);
     ~Pony();
     void saysHello(void);
     void talk(void);
-    std::string getName();
-    std::string getBehavior();
     void setBehavior(std::string behavior);
 
     private:
-    std::string name;  
-    std::string behavior;  
+    std::string _name;  
+    std::string _behavior;  
 };
 
 #endif

@@ -1,18 +1,17 @@
 # include <string>
 # include <iostream>
 # include "Pony.hpp"
-# include "Pony.cpp"
 
 void onTheHeap(void)
 {
-    Pony *penny = new Pony();
+    Pony *penny = new Pony("Jolly Jumper");
     penny->saysHello();
     delete penny;
 }
 
 void onTheStack(void)
 {
-    Pony penny = Pony();
+    Pony penny = Pony("Penny");
     penny.saysHello();
     penny.setBehavior("bad");
     penny.talk();

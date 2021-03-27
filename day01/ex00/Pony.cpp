@@ -2,40 +2,30 @@
 # include <iostream>
 # include "Pony.hpp"
 
-Pony::Pony()
+Pony::Pony(std::string name)
 {
-    this->behavior = "kind";
-    this->name = "Penny";
-    std::cout << "A " << this->behavior << " pony called " << this->name << " has been created." << std::endl;
+    this->_behavior = "kind";
+    _name = name;
+    std::cout << "A " << this->_behavior << " pony called " << this->_name << " has been created." << std::endl;
 }
 
 Pony::~Pony()
 {
-    std::cout << "A " << this->behavior << " pony called " << this->name << " has been killed." << std::endl;
-}
-
-std::string Pony::getName()
-{
-    return this->name;
-}
-
-std::string Pony::getBehavior()
-{
-    return this->behavior;
+    std::cout << "A " << this->_behavior << " pony called " << this->_name << " has been killed." << std::endl;
 }
 
 void Pony::setBehavior(std::string behavior)
 {
-    this->behavior = behavior;
+    this->_behavior = behavior;
 }
 
 void Pony::saysHello()
 {
-    std::cout << "hello, I'm " << this->name << "and I'm " << this->behavior << std::endl;
+    std::cout << "hello, I'm alive!" << std::endl;
 }
 
 void Pony::talk()
 {
-    std::cout << "Don't you dare mess with " << this->behavior << " " << this->name << " !" << std::endl;
+    std::cout << "Don't you dare mess with " << this->_behavior << " " << this->_name << "." << std::endl;
 }
 
