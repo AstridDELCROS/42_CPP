@@ -4,9 +4,9 @@
 
 void onTheHeap(void)
 {
-    Pony *penny = new Pony("Jolly Jumper");
-    penny->saysHello();
-    delete penny;
+    Pony *jumper = new Pony("Jolly Jumper");
+    jumper->saysHello();
+    delete jumper;
 }
 
 void onTheStack(void)
