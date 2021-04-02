@@ -8,7 +8,7 @@ Zombie::Zombie(std::string name, std::string type)
 
 Zombie::~Zombie()
 {
-    std::cout << "Zombie killed on the stack if return or on the heap if delete." << std::endl;
+    std::cout << "Zombie killed on the stack." << std::endl;
 }
 
 void Zombie::announce(void)

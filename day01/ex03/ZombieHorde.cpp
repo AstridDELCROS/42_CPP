@@ -15,7 +15,7 @@ ZombieHorde::ZombieHorde(int n)
 ZombieHorde::~ZombieHorde()
 {
     delete [] this->horde;
-    std::cout << "Zombie killed on the heap." << std::endl;
+    std::cout << "Horde killed on the heap." << std::endl;
 }
 
 void ZombieHorde::announce(void)
