@@ -50,8 +50,11 @@ int	main()
 			}
 		else
 		{
-			std::cout << "Choose between ADD, SEARCH and EXIT please" << std::endl;
-			std::cout << std::endl;
+			if (choice != "EXIT")
+			{
+				std::cout << "Choose between ADD, SEARCH and EXIT please" << std::endl;
+				std::cout << std::endl;
+			}
 		}
 	}
 	return (0);
