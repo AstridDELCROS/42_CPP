@@ -15,6 +15,8 @@
 # include "Zombie.hpp"
 # include <string>
 # include <iostream>
+# include <ctime>
+# include <cstdlib>
 
 class	ZombieEvent
 {
