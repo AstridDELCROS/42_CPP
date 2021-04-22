@@ -36,7 +36,6 @@ void		searchContact(PhoneBook Phonebook[], int numOfContactsAdded)
 	else
 	{
 		std::cin.clear();
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		std::cout << "Sorry, nothing to show." << std::endl;
 	}
 }
