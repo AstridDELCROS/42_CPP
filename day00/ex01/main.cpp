@@ -30,6 +30,8 @@ int	main()
 	while (choice != "EXIT")
 	{
 		getline(std::cin, choice, '\n');
+		if (std::cin.eof())
+            return 0;
 		if (choice == "ADD")
 		{
 			if (entry_index < MAX_CONTACTS)
