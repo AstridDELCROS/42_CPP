@@ -31,10 +31,10 @@ public:
 
 private:
 	int     _value;
-    int     _fractionalBits = 8;
+    static const int     _fractionalBits = 8;
     
 };
 
-std::ostream&   operator<<(std::ostream output, Fixed const &fixed);
+std::ostream&   operator<<(std::ostream &output, Fixed const &fixed);
 
 #endif
