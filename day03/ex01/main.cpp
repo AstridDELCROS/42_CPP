@@ -11,14 +11,14 @@
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
-// #include "ScavTrap.hpp"
-// # include <iostream>
+#include "ScavTrap.hpp"
+# include <iostream>
 # include <cstdlib>
 
 int	main() {
 	FragTrap 	*D34THTP = new FragTrap("IT54-TP");
 	FragTrap    *CL4PTP = new FragTrap("M0U5-TP");
-	// ScavTrap	*DOORM4NTP = new ScavTrap("D20R");
+	ScavTrap	*DOORM4NTP = new ScavTrap("D20R");
 
 	srand(time(NULL));
 	FragTrap    copyBot(*D34THTP);
@@ -38,8 +38,8 @@ int	main() {
 	delete(D34THTP);
 	delete(CL4PTP);
 	std::cout << "Here come newcomers" << std::endl;
-	// DOORM4NTP->challengeNewcomer("newcomer");
-	// delete(DOORM4NTP);
-	// DOORM4NTP->challengeNewcomer("another newcomer");
+	DOORM4NTP->challengeNewcomer("newcomer");
+	DOORM4NTP->challengeNewcomer("newcomer");
+	delete(DOORM4NTP);
 	return 0;
 }

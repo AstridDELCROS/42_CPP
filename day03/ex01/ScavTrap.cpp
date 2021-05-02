@@ -85,9 +85,9 @@ void		ScavTrap::beRepaired(unsigned int amount) {
 
 void		ScavTrap::challengeNewcomer(std::string const &target) {
 	std::string challenge[3] = {
-		"Solve this enigma",
-		"Keep eyes open while sneezing",
-		"Play 5 times to russian roulette"
+		"solve this enigma",
+		"keep eyes open while sneezing",
+		"play 5 times to russian roulette"
 	};
 	if (this->_energyPoints >= 25) {
 		this->_energyPoints -= 25;
