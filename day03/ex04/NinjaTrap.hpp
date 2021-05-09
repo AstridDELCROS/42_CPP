@@ -25,11 +25,11 @@ public:
 	NinjaTrap(std::string _name);
 	NinjaTrap(NinjaTrap const &ninjaTrapSrc);
 	~NinjaTrap();
-	NinjaTrap&       operator=(NinjaTrap const &ninjaTrap);
-    void	        ninjaShoebox(ClapTrap &clapTrap);
-    void	        ninjaShoebox(FragTrap &fragTrap);
-    void	        ninjaShoebox(ScavTrap &scavTrap);
-    void	        ninjaShoebox(NinjaTrap &ninjaTrap);
+	NinjaTrap&      operator=(NinjaTrap const &ninjaTrap);
+    	void	        ninjaShoebox(ClapTrap &clapTrap);
+   	void	        ninjaShoebox(FragTrap &fragTrap);
+    	void	        ninjaShoebox(ScavTrap &scavTrap);
+    	void	        ninjaShoebox(NinjaTrap &ninjaTrap);
 
 };
 

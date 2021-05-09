@@ -19,14 +19,14 @@
 
 int	main() {
 	FragTrap 	*D34THTP = new FragTrap("IT54-TP");
-	FragTrap    *CL4PTP = new FragTrap("M0U5-TP");
+	FragTrap	*CL4PTP = new FragTrap("M0U5-TP");
 	ScavTrap	*DOORM4NTP = new ScavTrap("D20R");
 	NinjaTrap	*K4R4TETP = new NinjaTrap("MIYAGITP");
 	ClapTrap	*B4SIC = new ClapTrap();
 	ClapTrap	*CL4PBIS = new ClapTrap("Bis");
 
 	srand(time(NULL));
-	FragTrap    copyBot(*D34THTP);
+	FragTrap   	copyBot(*D34THTP);
 	copyBot = *CL4PTP;
 	D34THTP->rangedAttack("random player");
 	D34THTP->meleeAttack("random player");

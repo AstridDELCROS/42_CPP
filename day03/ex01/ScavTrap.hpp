@@ -13,7 +13,6 @@
 #ifndef SCAVTRAP_HPP
 # define SCAVTRAP_HPP
 # include <iostream>
-// # include <cstdlib>
 
 class	ScavTrap {
 
@@ -23,10 +22,10 @@ public:
 	~ScavTrap();
 	ScavTrap&       operator=(ScavTrap const &scavTrap);
 	void        	rangedAttack(std::string const &target);
-    void	        meleeAttack(std::string const &target);
-	void		    takeDamage(unsigned int amount);
-    void	        beRepaired(unsigned int amount);
-    void	        challengeNewcomer(std::string const &target);
+	void		meleeAttack(std::string const &target);
+	void		takeDamage(unsigned int amount);
+    	void	        beRepaired(unsigned int amount);
+    	void	        challengeNewcomer(std::string const &target);
 
 private:
     std::string 	_name;

@@ -16,12 +16,12 @@
 # include <cstdlib>
 
 int	main() {
-	FragTrap 	*D34THTP = new FragTrap("IT54-TP");
-	FragTrap    *CL4PTP = new FragTrap("M0U5-TP");
+	FragTrap	*D34THTP = new FragTrap("IT54-TP");
+	FragTrap	*CL4PTP = new FragTrap("M0U5-TP");
 	ScavTrap	*DOORM4NTP = new ScavTrap("D20R");
 
 	srand(time(NULL));
-	FragTrap    copyBot(*D34THTP);
+	FragTrap	copyBot(*D34THTP);
 	copyBot = *CL4PTP;
 	D34THTP->rangedAttack("random player");
 	D34THTP->meleeAttack("random player");
