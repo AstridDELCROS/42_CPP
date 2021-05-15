@@ -55,7 +55,7 @@ void		FragTrap::vaulthunter_dot_exe(std::string const &target) {
 	};
 	if (this->_energyPoints >= 25) {
 		this->_energyPoints -= 25;
-		std::cout << "Well done! " << meleeRandomAttacks[std::rand() % 4] << " costs " \
+		std::cout << "Well done! " << meleeRandomAttacks[rand() % 4] << " costs " \
 		<< this->_meleeAttackDamage << " points to " << target << std::endl;
 	}
 	else
