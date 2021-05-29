@@ -54,7 +54,7 @@ void		ScavTrap::challengeNewcomer(std::string const &target) {
 	};
 	if (this->_energyPoints >= 25) {
 		this->_energyPoints -= 25;
-		std::cout << "Hello " << target << ", " << challenge[std::rand() % 3] << " to come in." << std::endl;
+		std::cout << "Hello " << target << ", " << challenge[rand() % 3] << " to come in." << std::endl;
 	}
 	else
 		std::cout << "SC4V-TP " << this->_name << " needs " << 25 - this->_energyPoints \

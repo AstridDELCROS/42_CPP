@@ -13,6 +13,7 @@
 #ifndef FRAGTRAP_HPP
 # define FRAGTRAP_HPP
 # include <iostream>
+# include <cstdlib>
 # include "ClapTrap.hpp"
 
 class	FragTrap : virtual public ClapTrap {
