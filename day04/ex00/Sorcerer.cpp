@@ -21,7 +21,7 @@ Sorcerer::Sorcerer(Sorcerer const &sorcererSrc) {
 	std::cout << "Copy of " << this->_name << ", " << this->_title << ", created" << std::endl;
 }
 
-Sorcerer&	Sorcerer::operator=(Sorcerer const &sorcererSrc) {
+Sorcerer&		Sorcerer::operator=(Sorcerer const &sorcererSrc) {
 	this->_name = sorcererSrc._name;
 	this->_title = sorcererSrc._title;
 	return *this;
