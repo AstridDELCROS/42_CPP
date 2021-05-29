@@ -26,7 +26,7 @@ protected:
 
 public:
     Enemy(int hp, std::string const &type);
-    Enemy(const Enemy *src);
+    Enemy(Enemy const &src);
     Enemy &operator=(const Enemy &rhs);
     virtual         ~Enemy();
     std::string     getType() const;
