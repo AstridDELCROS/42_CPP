@@ -15,18 +15,16 @@
 # include "IMateriaSource.hpp"
 # include <string.h>
 
-class MateriaSource: public IMateriaSource
-{
+class MateriaSource: public IMateriaSource {
 	public:
 		MateriaSource();
 		MateriaSource(const MateriaSource& src);
-		~MateriaSource();
-
 		MateriaSource&	operator=(const MateriaSource& rhs);
-		void			learnMateria(AMateria* materia);
-        AMateria*		createMateria(const std::string& type);
+		~MateriaSource();
+		void		learnMateria(AMateria* materia);
+        	AMateria*	createMateria(const std::string& type);
 	private:
-		AMateria*	_memorizedMateria[4];
+		AMateria	*_memorizedMateria[4];
 };
 
 #endif

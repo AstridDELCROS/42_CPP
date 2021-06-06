@@ -12,33 +12,27 @@
 
 #include "MateriaSource.hpp"
 
-MateriaSource::MateriaSource()
-{
-	for (int i = 0; i < 4; i++) {
+MateriaSource::MateriaSource() {
+	for (int i = 0; i < 4; i++)
 		this->_memorizedMateria[i] = NULL;
-	}
 }
 
-MateriaSource::MateriaSource(const MateriaSource& copy)
-{
-	for (int i = 0; i < 4; i++) {
+MateriaSource::MateriaSource(const MateriaSource& copy) {
+	for (int i = 0; i < 4; i++)
 		this->_memorizedMateria[i] = NULL;
-	}
 	for (int i = 0; i < 4; i++)
 		if (this->_memorizedMateria[i])
 			delete this->_memorizedMateria[i];
 	*this = copy;
 }
 
-MateriaSource::~MateriaSource()
-{
+MateriaSource::~MateriaSource() {
 	for (int i = 0; i < 4; i++)
 		if (this->_memorizedMateria[i])
 			delete this->_memorizedMateria[i];
 }
 
-MateriaSource&	MateriaSource::operator=(const MateriaSource& rhs)
-{
+MateriaSource&	MateriaSource::operator=(const MateriaSource& rhs) {
 	for (int i = 0; i < 4; i++) {
 		if (this->_memorizedMateria[i]) {
 			delete this->_memorizedMateria[i];
@@ -51,22 +45,17 @@ MateriaSource&	MateriaSource::operator=(const MateriaSource& rhs)
 	return *this;
 }
 
-void			MateriaSource::learnMateria(AMateria* materia)
-{
+void			MateriaSource::learnMateria(AMateria* materia) {
 	for(int i = 0; i < 4; i++)
-		if (!this->_memorizedMateria[i])
-		{
+		if (!this->_memorizedMateria[i]) {
 			this->_memorizedMateria[i] = materia;
 			return;
 		}
 }
 
-AMateria*		MateriaSource::createMateria(const std::string& type)
-{
+AMateria*		MateriaSource::createMateria(const std::string& type) {
 	for(int i = 0; i < 4; i++)
 		if (this->_memorizedMateria[i]->getType() == type)
-		{
 			return this->_memorizedMateria[i]->clone();
-		}
 	return NULL;
 }

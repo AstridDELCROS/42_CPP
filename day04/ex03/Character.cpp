@@ -14,65 +14,56 @@
 
 Character::Character(){}
 
-Character::Character(std::string name): _name(name)
-{
-	for (int i = 0; i < 4; i++) {
+Character::Character(std::string name): _name(name) {
+	for (int i = 0; i < 4; i++)
 		this->_inventory[i] = NULL;
-	}
 }
 
-Character::Character(const Character& src)
-{
-	for (int i = 0; i < 4; i++) {
+Character::Character(const Character& src) {
+	for (int i = 0; i < 4; i++)
 		this->_inventory[i] = NULL;
-	}
 	*this = src;
 }
 
-Character::~Character()
-{
+Character::~Character() {
 	for (int i = 0; i < 4; i++)
 		if (this->_inventory[i])
 			delete this->_inventory[i];
 }
 
-Character&			Character::operator=(const Character& rhs)
-{
-	for (int i = 0; i < 4; i++)
+Character&			Character::operator=(const Character& rhs) {
+	for (int i = 0; i < 4; i++) {
 		if (this->_inventory[i]) {
 			delete this->_inventory[i];
 			this->_inventory[i] = NULL;
 		}
+	}
 	this->_name = rhs.getName();
-	for(int i = 0; i < 4; i++)
+	for(int i = 0; i < 4; i++) {
 		if(rhs._inventory[i])
 			this->_inventory[i] = rhs._inventory[i]->clone();
+	}
 	return *this;
 }
 
-const std::string&	Character::getName() const
-{
+const std::string&	Character::getName() const {
 	return this->_name;
 }
 
-void				Character::equip(AMateria* m)
-{
+void				Character::equip(AMateria* m) {
 	for(int i = 0; i < 4; i++)
-		if (!this->_inventory[i])
-		{
+		if (!this->_inventory[i]) {
 			this->_inventory[i] = m;
 			return;
 		}
 }
 
-void				Character::unequip(int idx)
-{
+void				Character::unequip(int idx) {
 	if (idx >= 0 && idx < 4)
 		this->_inventory[idx] = NULL;
 }
 
-void				Character::use(int idx, ICharacter& target)
-{
+void				Character::use(int idx, ICharacter& target) {
 	if (idx >= 0 && idx < 4 && this->_inventory[idx])
 		this->_inventory[idx]->use(target);
 }

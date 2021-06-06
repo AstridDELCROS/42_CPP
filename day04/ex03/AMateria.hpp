@@ -17,17 +17,16 @@
 
 class ICharacter;
 
-class AMateria
-{
+class AMateria {
 	private:
 		AMateria();
 	protected:
 		unsigned int	_xp;
-		std::string		_type;
+		std::string	_type;
 	public:
 		AMateria(const std::string& type);
 		AMateria(const AMateria& src);
-		AMateria&			operator=(const AMateria& rhs);
+		AMateria&		operator=(const AMateria& rhs);
 		virtual ~AMateria();
 		const std::string&	getType() const; //Returns the materia type
 		unsigned int		getXP() const; //Returns the Materia's XP
