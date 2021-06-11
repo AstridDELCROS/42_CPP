@@ -17,7 +17,9 @@ AMateria::AMateria(){}
 AMateria::AMateria(const std::string& type):_xp(0), _type(type){}
 
 AMateria::AMateria(const AMateria& src) {
-	*this = src;
+	// *this = src;
+	this->_type = src.getType();
+	this->_xp = src.getXP();
 }
 
 AMateria&		AMateria::operator=(const AMateria& rhs) {

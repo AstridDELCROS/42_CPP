@@ -14,8 +14,8 @@
 
 Cure::Cure():AMateria("cure"){}
 
-Cure::Cure(const Cure& copy):AMateria(copy) {
-	*this = copy;
+Cure::Cure(const Cure& src):AMateria(src) {
+	*this = src;
 }
 
 Cure::~Cure(){}
