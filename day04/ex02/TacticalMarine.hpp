@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Enemy.cpp                                          :+:      :+:    :+:   */
+/*   TacticalMarine.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adelcros <adelcros@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,35 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Enemy.hpp"
+#ifndef TACTICALMARINE_HPP
+# define TACTICALMARINE_HPP
+# include "ISpaceMarine.hpp"
 
-Enemy::Enemy(){}
+class TacticalMarine : public ISpaceMarine {
 
-Enemy::Enemy(int hp, std::string const &type): _hp(hp), _type(type){}
+public:
+    TacticalMarine();
+    TacticalMarine(TacticalMarine const &src);
+    TacticalMarine&operator=(TacticalMarine const &rhs);
+    virtual ~TacticalMarine();
+    virtual ISpaceMarine* clone() const;
+    virtual void battleCry() const;
+    virtual void rangedAttack() const;
+    virtual void meleeAttack() const;
 
-Enemy::Enemy(Enemy const &src) {
-    *this = src;
-}
+};
 
-Enemy::~Enemy(){}
-
-Enemy& Enemy::operator=(const Enemy &rhs) {
-    this->_hp = rhs._hp;
-    this->_type = rhs._type;
-    return *this;
-}
-
-std::string     Enemy::getType() const {
-    return this->_type;
-}
-int             Enemy::getHP() const {
-    return this->_hp;
-}
-void            Enemy::takeDamage(int damage) {
-    if (this->_hp - damage > 0) {
-        this->_hp -= damage;
-    }
-    else {
-        this->_hp = 0;
-    }
-}
+#endif

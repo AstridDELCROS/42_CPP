@@ -20,8 +20,7 @@
 #include <iostream>
 #include <cstdlib>
 
-int main()
-{
+void    schoolTests() {
     Character* me = new Character("me");
     std::cout << *me;
     Enemy* b = new RadScorpion();
@@ -38,5 +37,23 @@ int main()
     std::cout << *me;
     me->attack(b);
     std::cout << *me;
+}
+
+void    homemadeTests() {
+    Character player("player");
+    std::cout << player;
+    Enemy* mutant = new SuperMutant();
+    AWeapon* rifle = new PlasmaRifle();
+    player.equip(rifle);
+    std::cout << player;
+    player.attack(mutant);
+}
+
+int main()
+{
+    std::cout << "\033[0;31mSchool Tests\033[0m" << std::endl;
+    schoolTests();
+    std::cout << "\033[0;31mHome-made Tests\033[0m" << std::endl;
+    homemadeTests();
     return 0;
 }

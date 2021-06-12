@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Enemy.cpp                                          :+:      :+:    :+:   */
+/*   Squad.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adelcros <adelcros@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,35 +10,24 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Enemy.hpp"
+#ifndef SQUAD_HPP
+# define SQUAD_HPP
+# include "ISpaceMarine.hpp"
+# include "ISquad.hpp"
 
-Enemy::Enemy(){}
+class Squad : public ISquad {
 
-Enemy::Enemy(int hp, std::string const &type): _hp(hp), _type(type){}
+private:
+	int _unitCount;
+	ISpaceMarine **_units;
+public:
+    Squad();
+    Squad(Squad const &src);
+    Squad&operator=(Squad const &rhs);
+    ~Squad();
+    int getCount() const;
+    ISpaceMarine* getUnit(int) const;
+    int push(ISpaceMarine*);
+};
 
-Enemy::Enemy(Enemy const &src) {
-    *this = src;
-}
-
-Enemy::~Enemy(){}
-
-Enemy& Enemy::operator=(const Enemy &rhs) {
-    this->_hp = rhs._hp;
-    this->_type = rhs._type;
-    return *this;
-}
-
-std::string     Enemy::getType() const {
-    return this->_type;
-}
-int             Enemy::getHP() const {
-    return this->_hp;
-}
-void            Enemy::takeDamage(int damage) {
-    if (this->_hp - damage > 0) {
-        this->_hp -= damage;
-    }
-    else {
-        this->_hp = 0;
-    }
-}
+#endif

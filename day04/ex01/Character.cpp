@@ -32,6 +32,7 @@ Character& Character::operator=(const Character &rhs) {
 std::string Character::getName() const {
     return this->_name;
 }
+
 int         Character::getAP() const {
     return this->_ap;
 }
@@ -70,7 +71,7 @@ std::ostream    &operator<<(std::ostream &output, Character const &rhs) {
         output << "wields a " << rhs.getWeapon()->getName();
     }
     else {
-        output << " is unarmed.";
+        output << "is unarmed.";
     }
     output << std::endl;
     return output;
