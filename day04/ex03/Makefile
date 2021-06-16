@@ -1,7 +1,6 @@
 NAME			= equip
 CC				= clang++
-# CFLAGS			= -Wall -Wextra -Werror -std=c++98
-CFLAGS			= -Wall -Wextra -Werror -std=c++98 -fsanitize=address
+CFLAGS			= -Wall -Wextra -Werror -std=c++98
 SRCS			= main.cpp AMateria.cpp Character.cpp Cure.cpp Ice.cpp MateriaSource.cpp
 INC				= AMateria.hpp Character.hpp Cure.hpp IMateriaSource.hpp Ice.hpp MateriaSource.hpp ICharacter.hpp
 OBJS			= $(SRCS:.cpp=.o)
