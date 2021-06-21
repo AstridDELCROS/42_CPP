@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Intern.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adelcros <adelcros@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,27 +10,27 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
+#ifndef INTERN_HPP
+# define INTERN_HPP
+# include <iostream>
+# include "Form.hpp"
 
-int main() {
-    Bureaucrat jean("Jean", 1);
-    Bureaucrat michel("Michel", 150);
-    Bureaucrat jean_michel("Jean-Michel", 120);
-    Form contract("contract", 42, 120);
-    std::cout << jean << ", " << michel << ", " << jean_michel << "\n";
-    std::cout << "Let's make bureaucrats sign the contract: \n";
-    try
-    {
-        michel.signForm(contract);
-        std::cout << contract << std::endl;
-        jean.signForm(contract);
-        std::cout << contract << std::endl;
-        jean_michel.signForm(contract);
-        std::cout << contract << std::endl;
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << '\n';
-    }
-}
+class Intern {
+	private:
+        struct createForms {
+            std::string _formName;
+            Form*       (*f)(std::string &target);
+        };
+        static createForms   _arr[3];
+        static Form *makePresidentialPardonForm(std::string &target);
+        static Form *makeRobotomyRequestForm(std::string &target);
+        static Form *makeShrubberyCreationForm(std::string &target);
+	public:
+		Intern();
+		Intern(const Intern& src);
+		Intern&		operator=(const Intern& rhs);
+		virtual     ~Intern();
+		Form*       makeForm (std::string formName, std::string target);
+};
 
+#endif

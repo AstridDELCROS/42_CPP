@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adelcros <adelcros@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,27 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
+#ifndef ROBOTOMYREQUESTFORM_HPP
+# define ROBOTOMYREQUESTFORM_HPP
+# include <iostream>
+# include "Bureaucrat.hpp"
+# include "Form.hpp"
 
-int main() {
-    Bureaucrat jean("Jean", 1);
-    Bureaucrat michel("Michel", 150);
-    Bureaucrat jean_michel("Jean-Michel", 120);
-    Form contract("contract", 42, 120);
-    std::cout << jean << ", " << michel << ", " << jean_michel << "\n";
-    std::cout << "Let's make bureaucrats sign the contract: \n";
-    try
-    {
-        michel.signForm(contract);
-        std::cout << contract << std::endl;
-        jean.signForm(contract);
-        std::cout << contract << std::endl;
-        jean_michel.signForm(contract);
-        std::cout << contract << std::endl;
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << '\n';
-    }
-}
+class Bureaucrat;
 
+class RobotomyRequestForm : public Form {
+	public:
+		RobotomyRequestForm();
+		RobotomyRequestForm(std::string const &target);
+		RobotomyRequestForm(const RobotomyRequestForm& src);
+		RobotomyRequestForm&		operator=(const RobotomyRequestForm& rhs);
+		virtual ~RobotomyRequestForm();
+        int execute(Bureaucrat const & executor) const;
+};
+
+#endif

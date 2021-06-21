@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adelcros <adelcros@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,27 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
+#ifndef PRESIDENTIALPARDONFORM_HPP
+# define PRESIDENTIALPARDONFORM_HPP
+# include <iostream>
+# include "Form.hpp"
 
-int main() {
-    Bureaucrat jean("Jean", 1);
-    Bureaucrat michel("Michel", 150);
-    Bureaucrat jean_michel("Jean-Michel", 120);
-    Form contract("contract", 42, 120);
-    std::cout << jean << ", " << michel << ", " << jean_michel << "\n";
-    std::cout << "Let's make bureaucrats sign the contract: \n";
-    try
-    {
-        michel.signForm(contract);
-        std::cout << contract << std::endl;
-        jean.signForm(contract);
-        std::cout << contract << std::endl;
-        jean_michel.signForm(contract);
-        std::cout << contract << std::endl;
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << '\n';
-    }
-}
+class PresidentialPardonForm : public Form {
+	public:
+		PresidentialPardonForm();
+		PresidentialPardonForm(std::string const &target);
+		PresidentialPardonForm(const PresidentialPardonForm& src);
+		PresidentialPardonForm&		operator=(const PresidentialPardonForm& rhs);
+		virtual ~PresidentialPardonForm();
+        int execute(Bureaucrat const & executor) const;
+};
 
+#endif
