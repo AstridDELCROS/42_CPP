@@ -30,9 +30,9 @@ Intern::~Intern(){}
 
 Intern::createForms Intern::_arr[3] = {
 
-    { "presidential pardon", &Intern::makePresidentialPardonForm },
-    { "robotomy request", &Intern::makeRobotomyRequestForm },
-    { "shrubbery creation", &Intern::makeShrubberyCreationForm },
+    {"presidential pardon", &Intern::makePresidentialPardonForm},
+    {"robotomy request", &Intern::makeRobotomyRequestForm},
+    {"shrubbery creation", &Intern::makeShrubberyCreationForm},
 };
 
 Form    *Intern::makePresidentialPardonForm(std::string &target) {

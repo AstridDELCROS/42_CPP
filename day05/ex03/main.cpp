@@ -37,6 +37,7 @@ int main() {
         jean_mich.signForm(*ppf);
         std::cout << *ppf << std::endl;
         jean_mich.executeForm(*ppf);
+        delete ppf;
         std::cout << std::endl;
         jean.signForm(*robot);
         jean.executeForm(*robot);
