@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   whatever.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adelcros <adelcros@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,32 +10,25 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <cstdlib>
+#ifndef WHATEVER_HPP
+# define WHATEVER_HPP
+# include <iostream>
 
-struct Data {
-	std::string	str;
-};
-
-uintptr_t	serialize(Data* ptr) {
-	// return ptr in an uintptr_t type
-	return reinterpret_cast<uintptr_t>(ptr);
+template<typename T>
+void    swap(T &a, T &b) {
+    T tmp = a;
+    a = b;
+    b = tmp;
 }
 
-Data*		deserialize(uintptr_t raw) {
-	// back to original data
-	return reinterpret_cast<Data *>(raw);
+template<typename T>
+T const &min(T const &a, T const &b) {
+    return (a < b ? a : b);
 }
 
-int main() {
-	Data	data;
-	Data	*newData;
-	// uintptr_t == unsigned integer type that is capable of storing a data pointer
-	uintptr_t   raw;
-	data.str = "hello test";
-	raw = serialize(&data);
-	newData = deserialize(raw);
-	std::cout << "data before ======> " << &data << std::endl;
-	std::cout << "same data after ==> " << newData << std::endl;
-	return 0;
+template<typename T>
+T const &max(T const &a, T const &b) {
+    return (a > b ? a : b);
 }
+
+#endif

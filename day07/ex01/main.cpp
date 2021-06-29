@@ -10,32 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <cstdlib>
+#include "iter.hpp"
 
-struct Data {
-	std::string	str;
-};
-
-uintptr_t	serialize(Data* ptr) {
-	// return ptr in an uintptr_t type
-	return reinterpret_cast<uintptr_t>(ptr);
-}
-
-Data*		deserialize(uintptr_t raw) {
-	// back to original data
-	return reinterpret_cast<Data *>(raw);
+template<typename T>
+void print(T item) {
+    std::cout << item;
 }
 
 int main() {
-	Data	data;
-	Data	*newData;
-	// uintptr_t == unsigned integer type that is capable of storing a data pointer
-	uintptr_t   raw;
-	data.str = "hello test";
-	raw = serialize(&data);
-	newData = deserialize(raw);
-	std::cout << "data before ======> " << &data << std::endl;
-	std::cout << "same data after ==> " << newData << std::endl;
-	return 0;
+    std::string arrStr[3] = {"am", "stram", "gram"};
+    iter(arrStr, 3, print);
+    int         arrInt[3] = {1, 2, 3};
+    iter(arrInt, 3, print);
+    return 0;
 }
