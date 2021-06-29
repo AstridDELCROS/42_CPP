@@ -11,7 +11,9 @@
 /* ************************************************************************** */
 
 #include "Base.hpp"
-# include <iostream>
+#include <iostream>
+#include <ctime>
+#include <cstdlib>
 
 Base    *generate() {
     std::srand(std::time(0));
