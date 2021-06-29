@@ -13,52 +13,29 @@
 #include <iostream>
 #include <cstdlib>
 
-struct Data
-{
-	std::string s1;
-	int n;
-	std::string s2;
+struct Data {
+	std::string	str;
 };
 
-void	*serialize(void)
-{
-	std::string	elementsToPick("abcdefghijklmnopqrstuvwxyz123456789");
-	char *raw = new char[sizeof(std::string) * 2 + sizeof(int)];
-	std::string	s1;
-	int			n;
-	std::string	s2;
-	
-	srand(time(NULL));
-	for (int i = 0; i < 8; i++)
-	{
-	    s1 += elementsToPick[rand() % elementsToPick.length() - 1];
-	    s2 += elementsToPick[rand() % elementsToPick.length() - 1];
-	}
-	n = rand();	
-	*reinterpret_cast<std::string *>(raw) = s1;
-	*reinterpret_cast<int *>(raw + sizeof(std::string)) = n;
-	*reinterpret_cast<std::string *>(raw + sizeof(std::string) + sizeof(int)) = s2;
-    std::cout << raw << n << s2 << std::endl;
-	return reinterpret_cast<void *>(raw);
+uintptr_t	serialize(Data* ptr) {
+	// return ptr in an uintptr_t type
+	return reinterpret_cast<uintptr_t>(ptr);
 }
 
-Data	*deserialize(void *raw)
-{
-    Data	*deserialized = new Data;
-	char    *data = reinterpret_cast<char *>(raw);
-	deserialized->s1 = *reinterpret_cast<std::string *>(data);
-	deserialized->n = *reinterpret_cast<int *>(data + sizeof(std::string));
-	deserialized->s2 = *reinterpret_cast<std::string *>(data + sizeof(std::string) + sizeof(int));
-	std::cout << "s1 => " << deserialized->s1 << std::endl;
-	std::cout << "n  => " << deserialized->n << std::endl;
-	std::cout << "s2 => " << deserialized->s2 << std::endl;
-	delete (reinterpret_cast<std::string *>(raw));
-    return (deserialized);
+Data*		deserialize(uintptr_t raw) {
+	// back to original data
+	return reinterpret_cast<Data *>(raw);
 }
 
-int	main(void)
-{
-	void    *raw = serialize();
-	deserialize(raw);
+int main() {
+	Data	data;
+	Data	*newData;
+	// uintptr_t == unsigned integer type that is capable of storing a data pointer
+	uintptr_t   raw;
+	data.str = "hello test";
+	raw = serialize(&data);
+	newData = deserialize(raw);
+	std::cout << "data before ======> " << &data << std::endl;
+	std::cout << "same data after ==> " << newData << std::endl;
 	return 0;
 }
