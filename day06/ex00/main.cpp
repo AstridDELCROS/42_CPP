@@ -15,6 +15,7 @@
 #include <iomanip>
 #include <stdexcept>
 #include <cmath>
+#include <cstdlib>
 #include <climits>
 
 void    convertToChar(double dd) {
@@ -66,6 +67,11 @@ int		main(int argc, char **argv) {
 		return (1);
 	}
 	double dd = std::atof(argv[1]);
+	char c;
+	if (!isdigit(argv[1][0]) && !argv[1][1]) {
+		c = argv[1][0];
+		dd = c;
+	}
 	convertToChar(dd);
 	convertToInt(dd);
 	convertToFloat(dd, getPrecision(argv[1]));
