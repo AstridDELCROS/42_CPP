@@ -8,7 +8,7 @@
 - II Exercise 01: My Awesome PhoneBook
 - III Exercise 02: The Job Of Your Dreams
 
-##### Exercise 00: Megaphone
+#### Exercise 00: Megaphone
 - Turn-in directory : ex 00 /
 - Files to turn in : Makefile, megaphone.cpp
 - Write a program that has the following behavior :
@@ -21,7 +21,7 @@ $>./megaphone
 * LOUD AND UNBEARABLE FEEDBACK NOISE *
 $>
 ```
-##### Exercise 01: My Awesome PhoneBook
+#### Exercise 01: My Awesome PhoneBook
 - Turn-in directory : ex 01 /
 - Files to turn in : Makefile, *.cpp, *.{h, hpp}
 - Welcome in the 80s and its unbelievable technology! Write a program that behaves like a crappy awesome phonebook software. Please take some time to give your executable a relevant name. When the program starts, the user is prompted for input: you should accept the ADD command, the SEARCH command or the EXIT command. Any other input is discarded.
@@ -41,7 +41,7 @@ http://www.cplusplus.com/reference/string/string/ and of course http://www.cplus
 When a command has been correctly executed, the program waits for another ADD or SEARCH command until an EXIT command.
 Once done, ask students around you to test your ADD command. That way you’ll know their darkest secret by using the SEARCH command after they left, which is obviously the only relevant part of this exercice. They will have no clue of your evil plot.
 
-##### Exercise 02: The Job Of Your Dreams
+#### Exercise 02: The Job Of Your Dreams
 - Turn-in directory : ex 02 /
 - Files to turn in : Account.class.cpp
 - It’s your first day of work at GlobalBanksters United. You successfully passed the hiring tests for the programmers team thanks to a few tricks withMicrosoft Office a friend showed you. But you know that it was your swift installation ofAdobe Reader that really blew your recruiter’s mind. This gave you the little edge needed to beat you opponents for this job.
