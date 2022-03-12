@@ -11,9 +11,9 @@
 - III Exercise 02: The Job Of Your Dreams
 
 ##### Exercise 00: Megaphone
-Turn-in directory : ex 00 /
-Files to turn in : Makefile, megaphone.cpp
-Write a program that has the following behavior :
+- Turn-in directory : ex 00 /
+- Files to turn in : Makefile, megaphone.cpp
+- Write a program that has the following behavior :
 ```
 $>./megaphone "shhhhh... I think the students are asleep..."
 SHHHHH... I THINK THE STUDENTS ARE ASLEEP...
@@ -24,9 +24,9 @@ $>./megaphone
 $>
 ```
 ##### Exercise 01: My Awesome PhoneBook
-Turn-in directory : ex 01 /
-Files to turn in : Makefile, *.cpp, *.{h, hpp}
-Welcome in the 80s and its unbelievable technology! Write a program that behaves like a crappy awesome phonebook software. Please take some time to give your executable a relevant name. When the program starts, the user is prompted for input: you should accept the ADD command, the SEARCH command or the EXIT command. Any other input is discarded.
+- Turn-in directory : ex 01 /
+- Files to turn in : Makefile, *.cpp, *.{h, hpp}
+- Welcome in the 80s and its unbelievable technology! Write a program that behaves like a crappy awesome phonebook software. Please take some time to give your executable a relevant name. When the program starts, the user is prompted for input: you should accept the ADD command, the SEARCH command or the EXIT command. Any other input is discarded.
 The program starts empty (no contacts), doesn’t use any dynamic allocation and can’t store more than 8 contacts. If a ninth contact is added, please define a relevant behavior.
 http://www.cplusplus.com/reference/string/string/ and of course http://www.cplusplus.com/reference/iomanip/
 - If the command is EXIT:
@@ -44,9 +44,9 @@ When a command has been correctly executed, the program waits for another ADD or
 Once done, ask students around you to test your ADD command. That way you’ll know their darkest secret by using the SEARCH command after they left, which is obviously the only relevant part of this exercice. They will have no clue of your evil plot.
 
 ##### Exercise 02: The Job Of Your Dreams
-Turn-in directory : ex 02 /
-Files to turn in : Account.class.cpp
-It’s your first day of work at GlobalBanksters United. You successfully passed the hiring tests for the programmers team thanks to a few tricks withMicrosoft Office a friend showed you. But you know that it was your swift installation ofAdobe Reader that really blew your recruiter’s mind. This gave you the little edge needed to beat you opponents for this job.
+- Turn-in directory : ex 02 /
+- Files to turn in : Account.class.cpp
+- It’s your first day of work at GlobalBanksters United. You successfully passed the hiring tests for the programmers team thanks to a few tricks withMicrosoft Office a friend showed you. But you know that it was your swift installation ofAdobe Reader that really blew your recruiter’s mind. This gave you the little edge needed to beat you opponents for this job.
 Anyway, you made it and your boss gave you your first task. He explained you that somebody lost the source code that handles the accounts of the bank’s customers. Your boss decided to recompile and restart the program to get the file back. Your predecessor got fired because he tried to explain to your boss how do to his job: he mentioned that "this is not how it’s supposed to work", "you deleted that file asshole !" and "we should have used Git as I told you". What a snotty little prick, wasn’t he?
 After a forty minutes long rant on your predecessor’s lack of expertise and constant bullshitting, you are assigned with the writing of the missing source file for tomorrow. Your boss would have loved to do it by himself, but you know, he has managerial things to do. So, he sent you the Account.class.hpp file attached to an email protected with a gpg key, along with his private key. "Security is important, the hackers can strike anywhere" said your boss as a conclusion as you leave his office.
 Uncomfortable in your suit and sweating profusely, you walk by the printer and the photocopier in the long hallway towards the open space to find your desk. You’re in the center area and everybody can see your screen. You also notice the big sign on the wall that happily and colorfully states "Headphones prevent team building! Silence enhances
