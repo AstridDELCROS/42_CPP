@@ -2,8 +2,6 @@
 
 #### Memory allocation, references, pointers to members, switch
 
-Summary: This document contains the subject for Module 01 of the C++ modules.
-
 **Contents**
 
 - I Exercise 00: BraiiiiiiinnnzzzZ
@@ -14,7 +12,7 @@ Summary: This document contains the subject for Module 01 of the C++ modules.
 - VI Exercise 05: Karen 2.0
 - VII Exercise 06: Karen-filter
 
-##### Exercise 00: BraiiiiiiinnnzzzZ
+#### Exercise 00: BraiiiiiiinnnzzzZ
 - Turn-in directory : ex 00 /
 - Files to turn in : Makefile, main.cpp, Zombie.cpp, Zombie.hpp, newZombie.cpp, randomChump.cpp
 - First, make a Zombie class. The zombies have a name and are able to announce themselves like:
@@ -32,7 +30,7 @@ void randomChump( std::string name );
 ```
 - Now the actual point of the exercise: your Zombies must be destroyed at the appropriate time (when they are not needed anymore). They must be allocated on the stack or the heap depending on its use: sometimes it’s appropriate to have them on the stack, at other times the heap may a better choice.
 
-##### Exercise 01: Moar brainz!
+#### Exercise 01: Moar brainz!
 - Turn-in directory : ex 01 /
 - Files to turn in :Makefile, main.cpp, Zombie.cpp, Zombie.hpp, ZombieHorde.cpp
 - Re-using the Zombie class, now we are going to create an horde of zombies!
@@ -43,7 +41,7 @@ Zombie* zombieHorde( int N, std::string name );
 Submit a main to test that your function zombie Horde works as intended. You may want to do so by calling announce() on each one of the Zombies. Do not forget to delete ALL the
 Zombies when you don’t need them anymore.
 
-##### Exercise 02: HI THIS IS BRAIN
+#### Exercise 02: HI THIS IS BRAIN
 - Turn-in directory : ex 02 /
 - Files to turn in : Makefile, main.cpp
 - Make a program in which you will create a string containing "HI THIS IS BRAIN". Create a string PTR which is a pointer to the string; and a string REF which is a reference to the string.
@@ -51,7 +49,7 @@ Zombies when you don’t need them anymore.
 - Last, display the string using the pointer, and finally display it using the reference.
 - That’s all, no tricks. The goal of this exercise is to make you demystify references. It isn’t something completely new, it is just another syntax for something that you already know: addresses. Even there are some tiny-little-minuscule details.
 
-##### Exercise 03: Unnecessary violence
+#### Exercise 03: Unnecessary violence
 - Turn-in directory : ex 03 /
 - Files to turn in :Makefile, main.cpp, Weapon.cpp, Weapon.hpp, HumanA.cpp, HumanA.hpp, HumanB.cpp, HumanB.hpp
 - Make a Weapon class, that has a type string, and a getType method that returns a const reference to this string. It also has a setType, of course!
@@ -84,7 +82,7 @@ int main() {
 ```
 In which case is it appropriate to store the Weapon as a pointer? And as a reference? Why? These are the questions you should ask yourself before turning in this exercise.
 
-##### Exercise 04: Sed is for losers
+#### Exercise 04: Sed is for losers
 - Turn-in directory : ex 04 /
 - Files to turn in :Makefile, main.cpp, and whatever else you need
 - Make a program called replace that takes a filename and two strings, let’s call them s1 and s2, that are NOT empty.
@@ -93,7 +91,7 @@ In which case is it appropriate to store the Weapon as a pointer? And as a refer
 Of course, you will handle errors as best you can. Do not use the C file manipulation functions, because that would be cheating, and cheating’s bad, m’kay?
 You will turn in some test files to show your program works.
 
-##### Exercise 05: Karen 2.
+#### Exercise 05: Karen 2.
 - Turn-in directory : ex 05 /
 - Files to turn in :Makefile, main.cpp, Karen.hpp, and Karen.cpp
 - Do you know Karen? We all do, no? In case you don’t, here are the kind of comments that Karen does:
@@ -114,7 +112,7 @@ void complain( std::string level );
 - The goal of this exercise is to use pointers to member functions. This is not a suggestion, Karen has to complain without using a forest of if/else if/else, she doesn’t hesitate or think twice!
 - Submit a main to test that Karen complains a lot. It is okay if you want to use the complains we give as example.
 
-##### Exercise 06: Karen-filter
+#### Exercise 06: Karen-filter
 - Turn-in directory : ex 06 /
 - Files to turn in :Makefile, main.cpp, Karen.hpp, and Karen.cpp
 - We are going to implement a system to filter if what Karen says is actually important or not, because sometimes we don’t want to pay attention to everything Karen says.
