@@ -4,13 +4,13 @@
 
 **Contents**
 
-- I Exercise 00: BraiiiiiiinnnzzzZ
-- II Exercise 01: Moar brainz!
-- III Exercise 02: HI THIS IS BRAIN
-- IV Exercise 03: Unnecessary violence
-- V Exercise 04: Sed is for losers
-- VI Exercise 05: Karen 2.0
-- VII Exercise 06: Karen-filter
+- Exercise 00: BraiiiiiiinnnzzzZ
+- Exercise 01: Moar brainz!
+- Exercise 02: HI THIS IS BRAIN
+- Exercise 03: Unnecessary violence
+- Exercise 04: Sed is for losers
+- Exercise 05: Karen 2.0
+- Exercise 06: Karen-filter
 
 #### Exercise 00: BraiiiiiiinnnzzzZ
 - Turn-in directory : ex 00 /
