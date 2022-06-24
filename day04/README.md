@@ -389,5 +389,5 @@ ex03 $ clang++ -W -Wall -Werror *.cpp
 ex03 $ ./a.out | cat -e
 * shoots an ice bolt at bob *$
 * heals bob's wounds *$
-``à
+```
 Don’t forget to turn in your main function, because you... well, okay, you know the drill now, don’t you?
