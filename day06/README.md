@@ -1,4 +1,4 @@
-## C++ Pool - day02
+## C++ Pool - day06
 
 #### Casts
 
